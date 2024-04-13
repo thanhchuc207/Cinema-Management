@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D2BAFFE-23DD-4C60-8FE3-747148DAB55F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Guna3</RootNamespace>
+    <AssemblyName>Guna3</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4d63bfbfdfd3c6e4, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Core.1.6.0\lib\net452\BCrypt.Net-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\ASUS\Documents\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\ASUS\Documents\Downloads\GunaFrameWorkCracked-main\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReceiptDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceiptDetail.Designer.cs">
+      <DependentUpon>FormReceiptDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMovieDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovieDetail.Designer.cs">
+      <DependentUpon>FormMovieDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScheduleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScheduleDetail.Designer.cs">
+      <DependentUpon>FormScheduleDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerAddEdit.Designer.cs">
+      <DependentUpon>FormCustomerAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaffEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaffEdit.Designer.cs">
+      <DependentUpon>FormStaffEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaffAdd.Designer.cs">
+      <DependentUpon>FormStaffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMovieAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovieAdd.Designer.cs">
+      <DependentUpon>FormMovieAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScheduleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScheduleAdd.Designer.cs">
+      <DependentUpon>FormScheduleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReceipt.Designer.cs">
+      <DependentUpon>UCReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCustomer.Designer.cs">
+      <DependentUpon>UCCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSchedule.Designer.cs">
+      <DependentUpon>UCSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCStaff.Designer.cs">
+      <DependentUpon>UCStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMovie.Designer.cs">
+      <DependentUpon>UCMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCustomerDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCustomerDetail.Designer.cs">
+      <DependentUpon>UCCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCStaffDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCStaffDetail.Designer.cs">
+      <DependentUpon>UCStaffDetail.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceiptDetail.resx">
+      <DependentUpon>FormReceiptDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovieDetail.resx">
+      <DependentUpon>FormMovieDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScheduleDetail.resx">
+      <DependentUpon>FormScheduleDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerAddEdit.resx">
+      <DependentUpon>FormCustomerAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaffEdit.resx">
+      <DependentUpon>FormStaffEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaffAdd.resx">
+      <DependentUpon>FormStaffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovieAdd.resx">
+      <DependentUpon>FormMovieAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScheduleAdd.resx">
+      <DependentUpon>FormScheduleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCReceipt.resx">
+      <DependentUpon>UCReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCustomer.resx">
+      <DependentUpon>UCCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSchedule.resx">
+      <DependentUpon>UCSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCStaff.resx">
+      <DependentUpon>UCStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMovie.resx">
+      <DependentUpon>UCMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCustomerDetail.resx">
+      <DependentUpon>UCCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCStaffDetail.resx">
+      <DependentUpon>UCStaffDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clapperboard-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-subtract-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-row-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-bin-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-multiply-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

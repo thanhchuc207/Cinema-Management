@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{022A4D86-0A25-434C-AB3B-B4089487758F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4d63bfbfdfd3c6e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Core.1.6.0\lib\net452\BCrypt.Net-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\win\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\win\Downloads\GunaFrameWorkCracked-main\GunaFrameWorkCracked-main\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\ButtonRoom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\ButtonSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\DayButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\ImagePicturebox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\SeatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\ShowtimeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormBookChair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBookChair.Designer.cs">
+      <DependentUpon>FormBookChair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangeMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeMail.Designer.cs">
+      <DependentUpon>FormChangeMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCustomer.Designer.cs">
+      <DependentUpon>FormEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainLogin.Designer.cs">
+      <DependentUpon>FormMainLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainStaff.Designer.cs">
+      <DependentUpon>FormMainStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMovieGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovieGenre.Designer.cs">
+      <DependentUpon>FormMovieGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMovieGenreDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovieGenreDetail.Designer.cs">
+      <DependentUpon>FormMovieGenreDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintReceipt.Designer.cs">
+      <DependentUpon>FormPrintReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintTickets.Designer.cs">
+      <DependentUpon>FormPrintTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoomType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoomType.Designer.cs">
+      <DependentUpon>FormRoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomer.Designer.cs">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovie.Designer.cs">
+      <DependentUpon>FormMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReceiptDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceiptDetail.Designer.cs">
+      <DependentUpon>FormReceiptDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoomDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoomDetail.Designer.cs">
+      <DependentUpon>FormRoomDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoomTypeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoomTypeDetail.Designer.cs">
+      <DependentUpon>FormRoomTypeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchedule.Designer.cs">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeatTypeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeatTypeDetail.Designer.cs">
+      <DependentUpon>FormSeatTypeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeatType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeatType.Designer.cs">
+      <DependentUpon>FormSeatType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaffAdd.Designer.cs">
+      <DependentUpon>FormStaffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaffEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaffEdit.Designer.cs">
+      <DependentUpon>FormStaffEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCCustomerStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCCustomerStaff.Designer.cs">
+      <DependentUpon>UCCustomerStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCFinishReset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCFinishReset.Designer.cs">
+      <DependentUpon>UCFinishReset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCForgotPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCForgotPassword.Designer.cs">
+      <DependentUpon>UCForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCLogin.Designer.cs">
+      <DependentUpon>UCLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovieBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovieBooking.Designer.cs">
+      <DependentUpon>UCMovieBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovieContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovieContent.Designer.cs">
+      <DependentUpon>UCMovieContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovieDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovieDetail.Designer.cs">
+      <DependentUpon>UCMovieDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCMoviePictureStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCMoviePictureStaff.Designer.cs">
+      <DependentUpon>UCMoviePictureStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCResetPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCResetPassword.Designer.cs">
+      <DependentUpon>UCResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCRoom.Designer.cs">
+      <DependentUpon>UCRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCRoomType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCRoomType.Designer.cs">
+      <DependentUpon>UCRoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCStatiscal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCStatiscal.Designer.cs">
+      <DependentUpon>UCStatiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCUpdateInformationStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCUpdateInformationStaff.Designer.cs">
+      <DependentUpon>UCUpdateInformationStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCVerification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCVerification.Designer.cs">
+      <DependentUpon>UCVerification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyUserControls\UCCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCCustomer.Designer.cs">
+      <DependentUpon>UCCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCMovie.Designer.cs">
+      <DependentUpon>UCMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCReceipt.Designer.cs">
+      <DependentUpon>UCReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCSchedule.Designer.cs">
+      <DependentUpon>UCSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCStaff.Designer.cs">
+      <DependentUpon>UCStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControls\UCStaffDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControls\UCStaffDetail.Designer.cs">
+      <DependentUpon>UCStaffDetail.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormBookChair.resx">
+      <DependentUpon>FormBookChair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeMail.resx">
+      <DependentUpon>FormChangeMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCustomer.resx">
+      <DependentUpon>FormEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainLogin.resx">
+      <DependentUpon>FormMainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainStaff.resx">
+      <DependentUpon>FormMainStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovieGenre.resx">
+      <DependentUpon>FormMovieGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovieGenreDetail.resx">
+      <DependentUpon>FormMovieGenreDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPayment.resx">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintReceipt.resx">
+      <DependentUpon>FormPrintReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintTickets.resx">
+      <DependentUpon>FormPrintTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoomType.resx">
+      <DependentUpon>FormRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomer.resx">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovie.resx">
+      <DependentUpon>FormMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceiptDetail.resx">
+      <DependentUpon>FormReceiptDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoomDetail.resx">
+      <DependentUpon>FormRoomDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoomTypeDetail.resx">
+      <DependentUpon>FormRoomTypeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchedule.resx">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeatTypeDetail.resx">
+      <DependentUpon>FormSeatTypeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeatType.resx">
+      <DependentUpon>FormSeatType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaffAdd.resx">
+      <DependentUpon>FormStaffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaffEdit.resx">
+      <DependentUpon>FormStaffEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCCustomerStaff.resx">
+      <DependentUpon>UCCustomerStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCFinishReset.resx">
+      <DependentUpon>UCFinishReset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCForgotPassword.resx">
+      <DependentUpon>UCForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCLogin.resx">
+      <DependentUpon>UCLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCMovieBooking.resx">
+      <DependentUpon>UCMovieBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCMovieContent.resx">
+      <DependentUpon>UCMovieContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCMovieDetail.resx">
+      <DependentUpon>UCMovieDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCMoviePictureStaff.resx">
+      <DependentUpon>UCMoviePictureStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCResetPassword.resx">
+      <DependentUpon>UCResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCRoom.resx">
+      <DependentUpon>UCRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCRoomType.resx">
+      <DependentUpon>UCRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCStatiscal.resx">
+      <DependentUpon>UCStatiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCUpdateInformationStaff.resx">
+      <DependentUpon>UCUpdateInformationStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCVerification.resx">
+      <DependentUpon>UCVerification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MyUserControls\UCCustomer.resx">
+      <DependentUpon>UCCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCMovie.resx">
+      <DependentUpon>UCMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCReceipt.resx">
+      <DependentUpon>UCReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCSchedule.resx">
+      <DependentUpon>UCSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCStaff.resx">
+      <DependentUpon>UCStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControls\UCStaffDetail.resx">
+      <DependentUpon>UCStaffDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportReceipt.rdlc" />
+    <EmbeddedResource Include="ReportTicket.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.DTO_Customer1.datasource" />
+    <None Include="Properties\DataSources\DTO.DTO_TBShift.datasource" />
+    <None Include="Properties\DataSources\DTO.DTO_Ticket.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clapperboard-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-row-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-multiply-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-subtract-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-bin-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{e8e9da31-88f4-434c-b740-736cac7777c3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{720d66f3-e1ee-49c4-ae10-1798ada0fd5a}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-call-female-30.png" />
+    <None Include="Resources\Avenger.jpg" />
+    <None Include="Resources\icons8-funnel-50.png" />
+    <None Include="Resources\icons8-search-24.png" />
+    <None Include="Resources\icons8-lock-301.png" />
+    <None Include="Resources\icons8-mail-50.png" />
+    <None Include="Resources\icons8-left-arrow-50.png" />
+    <None Include="Resources\icons8-lock-30.png" />
+    <None Include="Resources\icons8-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reload-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reload-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onepiecered1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-subtract-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-projector-50 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clapperboard-48 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-244.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-funnel-502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PosterNBN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-call-female-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clapperboard-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-human-care-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timetable-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clapperboard-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tear-off-calendar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie-theater-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-users-68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human-care-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timetable-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-best-seller-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue_Cute_Certificate_Of_Kindergarten_Graduation-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

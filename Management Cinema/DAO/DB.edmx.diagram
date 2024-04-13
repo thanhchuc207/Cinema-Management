@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df8b008997a24b99bbc306789124b213" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="CINEMAModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBCustomer" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBMovie" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBMovieGenres" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBReceipt" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBRoom" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBRoomType" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBSchedule" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBSeat" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBSeatBooking" Width="1.5" PointX="9.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBSeatType" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEMAModel.TBStaff" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="CINEMAModel.fk_id_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_movie" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_movie_type" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_receipt" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_staff_receipt" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.FK__TBSeat__room_id__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_room" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_room_type" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_schedule_seatbooking" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_seat" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEMAModel.fk_id_seat_type" ManuallyRouted="false" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
